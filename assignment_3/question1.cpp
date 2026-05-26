@@ -9,8 +9,8 @@ void swapNumbers(int *a, int *b) {
 }
 
 int main() {
-    int num1 = 10;
-    int num2 = 20;
+    int num1 = 5;
+    int num2 = 15;
 
     cout << "Before swap:" << endl;
     cout << "num1 = " << num1 << ", num2 = " << num2 << endl;
