@@ -4,8 +4,8 @@
 #include <string>
 
 
-void writeFile(std::string filename);
-void readFile(std::string filename);
-void appendFile(std::string filename);
+void writeFile(string filename);
+void readFile(string filename);
+void appendFile(string filename);
 
 #endif 
