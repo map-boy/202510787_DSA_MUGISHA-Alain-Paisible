@@ -1,8 +1,56 @@
 #include "student.h"
 
+//----------------------------------------------------------------------
+//class
+class Student {
+public:
+    int    id;
+    string name;
+    int    age;
+    string course;
+//----------------------------------------------------------------------
+
+    // Default constructor
+    Student() {
+        id = 0; name = ""; age = 0; course = "";
+    }
+//----------------------------------------------------------------------
+
+    // Parameterized constructor
+    Student(int i, string n, int a, string c) {
+        id = i; name = n; age = a; course = c;
+    }
+//----------------------------------------------------------------------
+
+    // Getters
+    int    getId()     { return id;     }
+    string getName()   { return name;   }
+    int    getAge()    { return age;    }
+    string getCourse() { return course; }
+//----------------------------------------------------------------------
+
+    // Setters
+    void setId(int i)        { id = i;     }
+    void setName(string n)   { name = n;   }
+    void setAge(int a)       { age = a;    }
+    void setCourse(string c) { course = c; }
+//----------------------------------------------------------------------
+
+    // Display one student
+    void display() {
+        cout << "  ID: "      << id
+             << "  Name: "   << name
+             << "  Age: "    << age
+             << "  Course: " << course << endl;
+    }
+//----------------------------------------------------------------------
+};
+//----------------------------------------------------------------------
+
 // Global storage
 Student students[100];
 int count = 0;
+//----------------------------------------------------------------------
 
 // Add a new student
 void addStudent() {
@@ -20,6 +68,7 @@ void addStudent() {
 
     cout << "  Student added successfully!" << endl;
 }
+//----------------------------------------------------------------------
 
 // Display all students
 void displayStudents() {
@@ -33,6 +82,7 @@ void displayStudents() {
     }
     cout << "  Total: " << count << " student(s)" << endl;
 }
+//----------------------------------------------------------------------
 
 // Search a student by ID
 void searchStudent() {
@@ -48,6 +98,7 @@ void searchStudent() {
     }
     cout << "  Student not found." << endl;
 }
+//----------------------------------------------------------------------
 
 // Update student information
 void updateStudent() {
@@ -73,6 +124,7 @@ void updateStudent() {
     }
     cout << "  Student not found." << endl;
 }
+//----------------------------------------------------------------------
 
 // Delete a student
 void deleteStudent() {
@@ -91,3 +143,4 @@ void deleteStudent() {
     }
     cout << "  Student not found." << endl;
 }
+//----------------------------------------------------------------------
